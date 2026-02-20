@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fugue Labs</title>
+  <meta name="description" content="Stateful systems for stateless models.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --fg: #e0e0e0;
+      --fg-dim: #6a6a6a;
+      --fg-accent: #ffffff;
+      --bg: #0a0a0a;
+      --rule: #1a1a1a;
+      --mono: 'JetBrains Mono', monospace;
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--mono);
+      font-weight: 300;
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    ::selection {
+      background: var(--fg-accent);
+      color: var(--bg);
+    }
+
+    main {
+      flex: 1;
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 15vh 2rem 10vh;
+      width: 100%;
+    }
+
+    .mark {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--fg-dim);
+      margin-bottom: 4rem;
+      display: block;
+    }
+
+    h1 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--fg-accent);
+      margin-bottom: 3rem;
+      letter-spacing: -0.01em;
+      line-height: 1.5;
+    }
+
+    .thesis {
+      margin-bottom: 3rem;
+    }
+
+    .thesis p {
+      font-size: 0.875rem;
+      margin-bottom: 1.5rem;
+      color: var(--fg);
+    }
+
+    .thesis p:last-child {
+      margin-bottom: 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 3rem 0;
+    }
+
+    .section-label {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--fg-dim);
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    .research-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .research-list li {
+      font-size: 0.8rem;
+      color: var(--fg);
+      padding: 0.4rem 0;
+      position: relative;
+      padding-left: 1rem;
+    }
+
+    .research-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 4px;
+      height: 1px;
+      background: var(--fg-dim);
+    }
+
+    .oss {
+      font-size: 0.8rem;
+      color: var(--fg);
+    }
+
+    .oss a {
+      color: var(--fg-accent);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      transition: border-color 0.2s;
+    }
+
+    .oss a:hover {
+      border-color: var(--fg-accent);
+    }
+
+    .oss .desc {
+      color: var(--fg-dim);
+      display: block;
+      margin-top: 0.25rem;
+      font-size: 0.75rem;
+    }
+
+    .quote {
+      font-size: 0.8rem;
+      font-style: italic;
+      color: var(--fg-dim);
+      margin-top: 3rem;
+    }
+
+    footer {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 2rem 4rem;
+      width: 100%;
+      display: flex;
+      gap: 2rem;
+    }
+
+    footer a {
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--fg-dim);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    footer a:hover {
+      color: var(--fg-accent);
+    }
+
+    @media (max-width: 480px) {
+      main {
+        padding: 10vh 1.5rem 8vh;
+      }
+
+      h1 {
+        font-size: 1rem;
+      }
+
+      footer {
+        padding: 0 1.5rem 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<main>
+  <span class="mark">Fugue Labs</span>
+
+  <h1>Stateful systems for stateless models.</h1>
+
+  <div class="thesis">
+    <p>The current trajectory of AI — scaling context windows indefinitely — is a structural dead end. Attention dilution, computational waste, behavioral drift. These aren't bugs. They're the architecture.</p>
+    <p>We're building the alternative.</p>
+    <p>Our agents operate with zero short-term memory. Context is flushed after every turn. Continuity comes from a tiered retrieval backend that handles consolidation, decay, and recall — the hippocampus — so the model can function purely as cortex.</p>
+  </div>
+
+  <hr>
+
+  <span class="section-label">Research</span>
+  <ul class="research-list">
+    <li>Tiered memory consolidation with adaptive decay</li>
+    <li>Procedural extraction from unstructured behavioral history</li>
+    <li>Entity resolution across noisy, high-cardinality datasets</li>
+    <li>Graph-augmented retrieval with hybrid ranking</li>
+  </ul>
+
+  <hr>
+
+  <span class="section-label">Open Source</span>
+  <div class="oss">
+    <a href="https://github.com/fugue-labs/gollem">Gollem</a>
+    <span class="desc">Production-grade Go framework for LLM agents. Durable execution, streaming, strict structured output. Native Temporal integration.</span>
+  </div>
+
+  <hr>
+
+  <p class="quote">Infinite context is a crutch for poor retrieval. True intelligence requires the ability to forget.</p>
+</main>
+
+<footer>
+  <a href="https://github.com/fugue-labs">GitHub</a>
+  <a href="mailto:comms@fugue.ai">Contact</a>
+</footer>
+
+</body>
+</html>
